@@ -1,0 +1,8 @@
+{
+  "name": "portfolio_1",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "less": "^2.5.3"
+  }
+}
