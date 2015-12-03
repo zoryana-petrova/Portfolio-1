@@ -1,0 +1,321 @@
+.ul-clear{
+    margin: 0;
+    padding:0;
+    list-style-type: none;
+}
+
+.clearfix:before,
+.clearfix:after{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+
+
+#uikit {
+    @font-family: 'OpenSans-Semibold', sans-serif;
+    @font-size: 14px;
+
+    .button {
+        display: inline-block;
+        font-size: @font-size;
+        font-family: @font-family;
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 11px 1.4em;
+    }
+
+    .button-secondary{
+        .button;
+      
+        background: #faf9f9;
+      
+        color: #727070;
+        text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.75);
+      
+        // stroke
+        border: 1px solid #b5b5b5;
+      
+        // inner shadow / drop shadow / inner glow
+        -webkit-box-shadow: inset 0 -2px 3px 0 rgba(45,45,45,0.05), 0 2px 1px 0 rgba(17,17,17,0.07), inset 0 -1px 3px 0 rgba(246,246,247,1);
+        box-shadow: inset 0 -2px 3px 0 rgba(45,45,45,0.05), 0 2px 1px 0 rgba(17,17,17,0.07), inset 0 -1px 3px 0 rgba(246,246,247,1);
+      
+        background: -webkit-linear-gradient(bottom, #e7e5e4 0%, #faf9f9 94%, #ffffff 100%);
+        background: -o-linear-gradient(bottom, #e7e5e4 0%, #faf9f9 94%, #ffffff 100%);
+        background: linear-gradient(to top, #e7e5e4 0%, #faf9f9 94%, #ffffff 100%);
+
+        &:hover{
+            background: -webkit-linear-gradient(bottom, #c0bebe 0%, #e2e0e0 86%, #e7e6e6 90%, #e7e6e6 100%);
+            background: -o-linear-gradient(bottom, #c0bebe 0%, #e2e0e0 86%, #e7e6e6 90%, #e7e6e6 100%);
+            background: linear-gradient(to top, #c0bebe 0%, #e2e0e0 86%, #e7e6e6 90%, #e7e6e6 100%);
+
+            // inner shadow / drop shadow / inner glow
+            -webkit-box-shadow: inset 0 -2px 3px 0 rgba(45,45,45,0.05), inset 0 -1px 3px 0 rgba(201,201,201,0.61);
+            box-shadow: inset 0 -2px 3px 0 rgba(45,45,45,0.05), inset 0 -1px 3px 0 rgba(201,201,201,0.61);
+            
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+        }
+
+        &:active{
+            // stroke
+            border: 1px solid #6d6d6d;
+      
+            -webkit-box-shadow: 0px 2px 1px 0 rgba(9, 9, 9, 0.22), inset 0px 1px 0px 0 rgba(255, 255, 255, 0.30); 
+            box-shadow: 0px 2px 1px 0 rgba(9, 9, 9, 0.22), inset 0px 1px 0px 0 rgba(255, 255, 255, 0.30); 
+
+            background: -webkit-linear-gradient(90deg, #7b7878 0%, #a9a8a8 100%);
+            background: -moz-linear-gradient(90deg, #7b7878 0%, #a9a8a8 100%);
+            background: -o-linear-gradient(90deg, #7b7878 0%, #a9a8a8 100%);
+            background: -ms-linear-gradient(90deg, #7b7878 0%, #a9a8a8 100%);
+            background: linear-gradient(0deg, #7b7878 0%, #a9a8a8 100%);
+            
+            color: #eeedec;
+            text-shadow: 0px 1px 0px #666565; 
+        }
+      }
+
+    .button-primary{
+        .button;
+
+        background: #fbf9f9;
+        color: #1e7465;
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+
+        // stroke
+        border: 1px solid #53bfa1;
+        // inner shadow / drop shadow 
+        -webkit-box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.3), 0px 2px 1px 0px rgba(9, 9, 9, 0.16);
+        box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.3), 0px 2px 1px 0px rgba(9, 9, 9, 0.16);
+
+        background:-webkit-linear-gradient(top,  rgba(128,232,203,1) 0%,rgba(67,183,150,1) 100%);
+        background: -o-linear-gradient(top,  rgba(128,232,203,1) 0%, rgba(67,183,150,1) 100%);
+        background: linear-gradient(to bottom,  rgba(128,232,203,1) 0%,rgba(67,183,150,1) 100%);
+
+        &:hover{
+            background: -o-linear-gradient(top,  rgba(95,220,189,1) 0%, rgba(58,160,135,1) 100%); 
+            background: -webkit-linear-gradient(top,  rgba(95,220,189,1) 0%, rgba(58,160,135,1) 100%); 
+            background: linear-gradient(top,  rgba(95,220,189,1) 0%, rgba(58,160,135,1) 100%); 
+
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+            -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+            box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+        }
+
+        &:active{
+            color: #eeedec;
+            text-shadow: 0px 1px 0px rgba(102, 101, 101, 1);
+            border: 1px solid #2d997e;
+            -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3), 0px 2px 1px 0px rgba(9, 9, 9, 0.16);
+            box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3), 0px 2px 1px 0px rgba(9, 9, 9, 0.16);
+
+            background: -o-linear-gradient(top,  rgba(75,188,161,1) 0%, rgba(37,118,98,1) 100%);
+            background: -webkit-linear-gradient(top,  rgba(75,188,161,1) 0%,rgba(37,118,98,1) 100%); 
+            background: linear-gradient(to bottom,  rgba(75,188,161,1) 0%,rgba(37,118,98,1) 100%); 
+        }
+    }
+}
+
+
+
+
+
+// .icon-about-bg{
+//     width: 54px;
+//     height: 54px;
+//     background: #f7f7f7;
+//     border-radius: 50%;
+//     -webkit-box-shadow:inset 1px 0 3px 0 rgba(199,199,199,0.75),  inset 1px 1px 0px 0px rgba(199, 199, 199, 0.75), 1px 1px 0px 0px rgba(255, 255, 255, 1);
+//     box-shadow:inset 1px 0 3px 0 rgba(199,199,199,0.75),  inset 1px 1px 0px 0px rgba(199, 199, 199, 0.75), 1px 1px 0px 0px rgba(255, 255, 255, 1);
+//     position: relative;
+
+//     .icon-about{
+//         width: 28px;
+//         height: 22px;
+//         background: url(../images/icons_sprite.png);   
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         margin: -11px 0 0 -14px;
+//         // border: 1px solid;
+//     }
+//     .file{
+//         background-position: -140px -99px;
+//     }
+//     .bag{
+//        background-position: -61px -100px; 
+//     }
+//     .school{
+//         background-position: -86px -100px;
+//     }
+//     .graduate{
+//         background-position: -114px -100px;
+//     }
+//     .polaroid{
+//         background-position: -45px -127px;
+//     }
+// }
+// .add-project-bg{
+//     width: 100%;
+//     font-family: 'Open Sans', sans-serif;;
+//     font-size: 12px;
+//     font-weight: 300;
+//     box-sizing: border-box;
+//     padding: 10px 5px;
+//     outline: none;
+//     border: 1px solid #d6d4d3;
+//     border-radius: 4px;
+//     color: #c7c6c6; 
+//     padding: 10px 5px;
+//     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 0px 1px 3px rgba(255, 255, 255, 0.15), 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
+//     -moz-box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 0px 1px 3px rgba(255, 255, 255, 0.15), 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
+//     box-shadow:  inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 0px 1px 3px rgba(255, 255, 255, 0.15), 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
+
+//     background: -o-linear-gradient(top,  rgba(251,249,249,0) 0%, rgba(233,231,231,1) 100%); 
+//     background: -webkit-linear-gradient(top,  rgba(251,249,249,0) 0%, rgba(233,231,231,1) 100%);
+//     background: linear-gradient(to bottom,  rgba(251,249,249,0) 0%, rgba(233,231,231,1) 100%); 
+// }
+// // ADD PROJECT  FORM
+// .add-project-form{
+//     width: 322px;
+//     .textarea-wrap{
+//         height: 115px;
+//          .add-project-textarea{
+//             .add-project-bg;
+//             resize: none;
+//         }
+//         .add-project-textarea::-webkit-input-placeholder, .add-project-input::-webkit-input-placeholder { 
+//             color: #c7c6c6; 
+//         }
+//         .add-project-textarea::-moz-placeholder, .add-project-input::-moz-placeholder{ 
+//             color: #c7c6c6;
+//         }
+//     }
+// }
+
+// //add-project-input
+// .add-project-wrap{
+//     width: 317px;
+//     height: 43px;
+//     position: relative;
+//     display: table;
+//     .add-project-input{
+//         .add-project-bg;
+//         height: 43px;
+//     }
+// }
+// .add-image-wrap{
+//     .add-image{
+//         display: table-cell;
+//         // position: relative;
+//         float: left;
+//         border-top-right-radius: 0;
+//         border-bottom-right-radius: 0;
+//     }
+//     .add-image-icon{
+//         width: 54px;
+//         height: 42px;
+//         background-color: #eee;
+//         border: 1px solid #ccc;
+//         border-radius: 4px;
+//         border-left: 0;
+//         display: table-cell;
+//         white-space: nowrap;
+//         border-top-left-radius: 0;
+//         border-bottom-left-radius: 0; 
+//         position: relative;
+//         .iCloud-down-icon{
+//             display: block;
+//             width: 26px;
+//             height: 18px;
+//             border: 1px solid;
+//             top: 50%;
+//             left: 50%;
+//             margin-left: -13px;
+//             margin-top: -9px;
+//             position: absolute;
+//             background: url(../images/icons_sprite.png);
+//             background-position: 99px 18px;
+//         }
+//     }
+// }
+
+// // BUTTONS NORMAL HOVER ACTIVE
+// .container {
+//   .button{
+//     #uikit > .button-secondary;   
+//     position: absolute;
+//     top: 10%;
+//     left: 5%;
+//     transform: translate(-50%, -50%);
+//   }
+//   .button-active{
+//     #uikit > .button-primary;
+
+//     position: absolute;
+//     top: 10%;
+//     left: 10%;
+//     transform: translate(-50%, -50%);
+//   }
+//    .button-post{
+//         position: absolute;
+//         top: 10%;
+//         left: 18%;
+//         transform: translate(-50%, -50%);
+//     }
+// }
+
+// //ICONS
+// .container {
+//     .icon-file{
+//         position: absolute;
+//         top: 4%;
+//         left: 24%;
+//     }
+//     .icon-bag{
+//         position: absolute;
+//         top: 4%;
+//         left: 28%;
+//     }
+//     .icon-school{
+//         position: absolute;
+//         top: 4%;
+//         left: 32%;
+//     }
+//     .icon-graduate{
+//         position: absolute;
+//         top: 4%;
+//         left: 36%;
+//     }
+//     .icon-polaroid{
+//         position: absolute;
+//         top: 4%;
+//         left: 40%;
+//     }
+  
+// }
+// // FORM
+// .container {
+//     .add-project-form{
+//         position: absolute;
+//         top: 30%;
+//         left: 3%;
+//     }
+//     .add-project-wrap{
+//         position: absolute;
+//         top: 30%;
+//         left: 29%;
+//     }
+//     .add-image-wrap{
+//         position: absolute;
+//         top: 50%;
+//         left: 29%;
+//     }
+// }

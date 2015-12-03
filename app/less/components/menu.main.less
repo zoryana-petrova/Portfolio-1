@@ -1,0 +1,34 @@
+.main-menu{
+  .ul-clear;
+  margin-bottom: 37px;
+
+  .main-menu-item .main-menu-link{
+    #uikit > .button-secondary;
+  }
+
+  .main-menu-item.active .main-menu-link{
+    #uikit > .button-primary;
+  }
+
+  .main-menu-item .main-menu-link,
+  .main-menu-item.active .main-menu-link{
+    display: block;
+    padding: 13px 1.4em;
+    text-align: left;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 0;
+  }
+}
+.main-menu  .main-menu-item:first-child{
+  .main-menu-link{
+    border-radius: 5px 5px 0 0;
+  }
+}
+.main-menu  .main-menu-item:last-child{
+  .main-menu-link{
+    border-radius: 0 0 5px 5px;
+  }
+}
+  
+

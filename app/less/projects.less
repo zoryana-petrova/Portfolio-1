@@ -1,0 +1,184 @@
+@import url('common.less');
+
+.projects-item-shadow{
+	-webkit-box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07);
+	-moz-box-shadow:    0px 2px 1px 0px rgba(9, 9, 9, 0.07);
+	box-shadow:         0px 2px 1px 0px rgba(9, 9, 9, 0.07);
+}
+
+.animation-link{
+	@-webkit-keyframes zoomIn {
+	  from {
+	    opacity: 0;
+	    -webkit-transform: scale3d(.3, .3, .3);
+	    transform: scale3d(.3, .3, .3);
+	  }
+	  50% {
+	    opacity: 1;
+	  }
+	}
+
+	@keyframes zoomIn {
+	  from {
+	    opacity: 0;
+	    -webkit-transform: scale3d(.3, .3, .3);
+	    transform: scale3d(.3, .3, .3);
+	  }
+
+	  50% {
+	    opacity: 1;
+	  }
+	}
+	.zoomIn {
+	  -webkit-animation-name: zoomIn;
+	  animation-name: zoomIn;
+	}
+}
+.animation-background{
+	@-webkit-keyframes slideInUp {
+	  from {
+	    -webkit-transform: translate3d(0, 100%, 0);
+	    transform: translate3d(0, 100%, 0);
+	    visibility: visible;
+	  }
+
+	  to {
+	    -webkit-transform: translate3d(0, 0, 0);
+	    transform: translate3d(0, 0, 0);
+	  }
+	}
+
+	@keyframes slideInUp {
+	  from {
+	    -webkit-transform: translate3d(0, 100%, 0);
+	    transform: translate3d(0, 100%, 0);
+	    visibility: visible;
+	  }
+
+	  to {
+	    -webkit-transform: translate3d(0, 0, 0);
+	    transform: translate3d(0, 0, 0);
+	  }
+	}
+
+	.slideInUp {
+	  -webkit-animation-name: slideInUp;
+	  animation-name: slideInUp;
+	}
+}
+
+
+.panel .content-panel-inner{
+	padding: 35px 26px;
+}
+.projects-list{
+	.ul-clear;
+	padding: 0;
+	.projects-item{
+		display: inline-block;
+		width: 167px;
+		vertical-align: top;
+    	margin-bottom: 30px;
+    	padding: 0 14px;
+        .item-content-wrapper{
+    		.projects-item-shadow;
+			border-radius: 6px;
+			vertical-align: top;
+			background: #ffffff;
+			text-align: center;
+			color: #727070;
+			border: 1px solid #909090;
+    	}
+    	.add-project{
+			display: block;
+			border-radius: 7px;
+			padding: 24px 20px;
+			font-family: 'OpenSans-Semibold';
+			font-size: 14px; 
+			color: #727070;
+			background: linear-gradient(#fdfcfc,#e9e8e8);
+			text-decoration: none;
+			&:before{
+				content: "";
+				display: block;
+				float: left;
+				width: 54px;
+				height: 54px;
+				background: #f7f7f7;
+				border-radius: 50%;
+				-webkit-box-shadow: inset 1px 0 3px 0 rgba(199, 199, 199, 0.75), inset 1px 1px 0px 0px rgba(199, 199, 199, 0.75), 1px 1px 0px 0px #ffffff;
+				box-shadow: inset 1px 0 3px 0 rgba(199, 199, 199, 0.75), inset 1px 1px 0px 0px rgba(199, 199, 199, 0.75), 1px 1px 0px 0px #ffffff;
+				background: url(../images/sprite_work_expiriance.png) no-repeat;
+				background-position: -203px 17px;
+				margin: 0 0 13px 38px;
+			}
+			&:hover{
+				-webkit-box-shadow: inset 0px 1px 0px 0px rgba(202, 202, 202, 0.61);
+				-moz-box-shadow:    inset 0px 1px 0px 0px rgba(202, 202, 202, 0.61);
+				box-shadow:         inset 0px 1px 0px 0px rgba(202, 202, 202, 0.61);
+				background: -moz-linear-gradient(top,  rgba(232,231,231,1) 0%, rgba(227,225,225,1) 13%, rgba(194,192,192,1) 100%); 
+				background: -webkit-linear-gradient(top,  rgba(232,231,231,1) 0%,rgba(227,225,225,1) 13%,rgba(194,192,192,1) 100%);
+				background: linear-gradient(to bottom,  rgba(232,231,231,1) 0%,rgba(227,225,225,1) 13%,rgba(194,192,192,1) 100%); 
+			}
+    	}
+    }
+}
+.projcts-image-wrapper{
+	border-bottom: 1px solid #b6b6b6;
+	position: relative;
+	.projects-image{
+		display: block;
+		width: 100%;
+	}
+	.see-more{
+		position: absolute;
+		opacity: 0;
+	}
+
+	&:hover{
+		.see-more{
+			.animation-link;
+			position: absolute;
+			display: block;
+			padding: 5px;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-transform: uppercase;
+			text-decoration: none;
+			border-radius: 4px;
+			top: 50%;
+			left: 50%;
+			margin-left: -62px;
+			margin-top: -8px;
+			opacity: 1;
+		}
+		&:before{
+			.animation-background;
+			content:" ";
+			display: block;
+			width: 167px;
+			height: 120px;
+			position: absolute;
+			background: rgba(111, 109, 109, 0.5);
+			border-radius: 5px 5px 0 0;
+			top: 0;
+		}
+	}
+}
+
+.item-content-wrapper{
+	.project-link{
+		display: block;
+		background: #f2f2f2;
+		padding: 8px 5px;
+		font-size: 14px;
+		font-family: "OpenSans-Semibold";
+		color: #727070;
+	}
+	.project-text{
+		margin: 0;
+		font-size: 12px;
+		font-family:  OpenSans-Light;
+		padding: 6px 5px;
+	}
+}
