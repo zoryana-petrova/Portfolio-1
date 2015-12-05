@@ -2,25 +2,26 @@
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
     -moz-box-shadow:    inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
     box-shadow:         inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
-
+    
+    background: #f3e9d5;
     background: -moz-linear-gradient(top,  rgba(251,249,249,0) 0%, rgba(224,197,145,1) 100%),  #ffffff; 
     background:  -webkit-linear-gradient(top,  rgba(251,249,249,0) 0%, rgba(224,197,145,0.45) 100%),  #ffffff; 
     background: linear-gradient(top,  rgba(251,249,249,0) 0%, rgba(224,197,145,0.45) 100%),  #ffffff; 
 }
-
-
 .panel-item-background{
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 1px 0px 0px rgba(255, 255, 255, 0.35), 0px 0px 1px 3px rgba(255, 255, 255, 0.15);
     -moz-box-shadow:    inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 1px 0px 0px rgba(255, 255, 255, 0.35), 0px 0px 1px 3px rgba(255, 255, 255, 0.15);
     box-shadow:         inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 1px 0px 0px rgba(255, 255, 255, 0.35), 0px 0px 1px 3px rgba(255, 255, 255, 0.15);
 
+    background: #fbfafa;
     background: -o-linear-gradient(top,  rgba(251,249,249,0) 0%, rgba(233,231,231,1) 100%); 
     background: -webkit-linear-gradient(top,  rgba(251,249,249,0) 0%,rgba(233,231,231,1) 100%); 
     background: linear-gradient(to bottom,  rgba(251,249,249,0) 0%,rgba(233,231,231,1) 100%); 
 }
 
-// MENU CONTCTS HEADER 
+// MENU CONTACTS HEADER 
 .contacts-header-background{
+    background: #e1b765;
     background: -o-linear-gradient(top,  rgba(244,204,126,1) 10%, rgba(220,177,93,1) 100%); 
     background: -webkit-linear-gradient(top,  rgba(244,204,126,1) 10%,rgba(220,177,93,1) 100%); 
     background: linear-gradient(to bottom,  rgba(244,204,126,1) 10%,rgba(220,177,93,1) 100%); 
@@ -46,68 +47,71 @@
             margin: 0;
         }
     }
-    .contacts-panel-inner{
-        .ul-clear;
-        .contacts-panel-item{
-            .panel-item-background;
-            border: 1px solid #d6d5d3;
-            background: #ffffff;
-            border-top: none;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            &:hover{
-                .panel-item-hover;
-            }
-            &:last-child{
-                border-radius: 0 0 5px 5px;
-            }
-            .contacts-panel-link{
-                display: block;
-                padding: 8px 63px;
-                color: #727070;
-                font-size: 14px;
-                text-align: left;
-                font-family: OpenSans-Regular;
-                text-decoration: none;
-                position: relative;
-                cursor: pointer;
-                &:before{
-                    content:"";
-                    position: absolute;
-                    left: 26px;
-                    top: 6px;
-                    width: 25px;
-                    height: 25px;
-                    border-top: 1px solid #dcb15d;
-                    border-right: 1px solid #dcb15d;
-                    transform: rotate(45deg);
-                    background: transparent;
-                }
-                &:after{
-                    content: " ";
-                    position: absolute;
-                    left: 16px;
-                    width: 20px;
-                    height: 22px;
-                    background: url(../../images/icons_sprite1.png);
-                }
-            }
-            .image-post:after{
-                background-position: 221px 53px;
-            }
-            .image-phone:after{
-                background-position: 203px 49px;
-            }
-            .image-skype:after{
-                background-position: 184px 51px;
-            }
-            .image-post{
-                text-decoration: underline;
-            }
-            .image-skype{
-                border-radius: 0 0 5px 5px;
-            } 
+}
+.contacts-panel-inner{
+    .ul-clear;
+    .contacts-panel-item{
+        .panel-item-background;
+        border: 1px solid #d6d5d3;
+        background: #ffffff;
+        border-top: none;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        &:hover{
+            .panel-item-hover;
+        }
+        &:last-child{
+            border-radius: 0 0 5px 5px;
         }
     }
+}
+.contacts-panel-link{
+    display: block;
+    padding: 8px 60px;
+    color: #727070;
+    font-size: 14px;
+    text-align: left;
+    font-family: OpenSans-Regular;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    &:before{
+        content:"";
+        position: absolute;
+        left: 26px;
+        top: 6px;
+        width: 25px;
+        height: 25px;
+        border-top: 1px solid #dcb15d;
+        border-right: 1px solid #dcb15d;
+        transform: rotate(45deg);
+        background: transparent;
+    }
+    &:after{
+        content: " ";
+        position: absolute;
+        left: 16px;
+        width: 20px;
+        height: 22px;
+        background: url(../../images/icons_sprite1.png);
+    }
+}
+
+.contacts-panel-item{
+    .image-post:after{
+        background-position: 221px 53px;
+    }
+    .image-phone:after{
+        background-position: 203px 49px;
+    }
+    .image-skype:after{
+        background-position: 184px 51px;
+    }
+    .image-post{
+        text-decoration: underline;
+    }
+    .image-skype{
+        border-radius: 0 0 5px 5px;
+    } 
 }
