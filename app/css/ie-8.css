@@ -1,3 +1,9 @@
+body {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/background.jpg", sizingMethod='scale');
+}
+.wrapper {
+  background: none;
+}
 .autorization-form {
   cursor: pointer;
 }
