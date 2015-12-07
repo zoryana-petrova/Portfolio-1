@@ -158,6 +158,10 @@ html, body{
         font-family: OpenSans-Semibold;
         font-size: 14px;
         margin-bottom: 5px;
+        border-top: none;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 }
 .portfolio-basic-text{
@@ -182,45 +186,48 @@ html, body{
 .skils-item{
     font-size: 9px;
     text-transform: uppercase;
-    margin-left: 5px;
+    margin: 0 0 10px 16px;
     display: inline-block;
     color: #1e7465;
-    font-family:  OpenSans-Semibold;
-    height: 25px;
-    line-height: 21px;
+    font-family: OpenSans-Semibold;
+    height: 16px;
+    line-height: 16px;
     text-align: center;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
-   
-    &:before, &:after{
+    position: relative;
+    padding: 0 5px;
+    border-top: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
+    border-left: none;
+    // border-radius: 0 5px 5px 0;
+    box-shadow:   inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #fbf9f9 6%, #e9e6e4 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%, #fbf9f9 6%, #e9e6e4 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #fbf9f9 6%, #e9e6e4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e9e6e4', GradientType=0);
+    &:before{
         content: "";
         display: block;
         background: url(../images/icons_sprite2.png) no-repeat;
-        float: left;
-        width: 10px;
-        height: 21px;
-    }
-    &:before{
-        position: relative;
-        top: 0px;
-        left: 0;
-        background-position: -277px 0px;
+        width: 12px;
+        height: 18px;
+        background-position: -268px 0px;
+        position: absolute;
+        top: -1px;
+        left: -11px;
     }
     &:after{
-        float: right;
+        content: "";
+        display: block;
+        background: url(../images/icons_sprite2.png) no-repeat;
         width: 4px;
-        height: 21px;
-        background-position: -416px 0px;
-        position: relative;
-        top: 0px;
-        left: 0px;
-    }
-    .skils-text{
-        display: inline-block;
-        background: url(../images/label_line.png) repeat-x;
-        padding: 0px 5px 0px 5px;
-        text-shadow: 0px 1px 0px rgba(255,255,255,.45);
+        height: 18px;
+        background-position: -298px 0px;
+        position: absolute;
+        top: -1px;
+        right: -2px;
     }
 }
 // PAGE-CONTENT END    

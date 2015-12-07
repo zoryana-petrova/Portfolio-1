@@ -314,7 +314,7 @@
   color: #d0982c;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
 }
-.menu-contacts .contacts-panel-header .contacts-header-text {
+.contacts-header-text {
   margin: 0;
 }
 .contacts-panel-inner {
@@ -435,7 +435,7 @@
   color: #eeedec;
   text-shadow: 0px 1px 0px #666565;
 }
-.panel .content-panel-inner {
+.content-panel-inner {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -449,7 +449,7 @@
   border-left-color: #b8b8b8;
   overflow: hidden;
 }
-.panel .content-panel-inner .content-panel-item {
+.content-panel-item {
   -webkit-box-shadow: 0px 1px 0px 0px #edeceb, 0px 2px 0px 0px rgba(255, 255, 255, 0.75), inset 0px -1px 0px 0px rgba(255, 255, 255, 0.75);
   -moz-box-shadow: 0px 1px 0px 0px #edeceb, 0px 2px 0px 0px rgba(255, 255, 255, 0.75), inset 0px -1px 0px 0px rgba(255, 255, 255, 0.75);
   box-shadow: 0px 1px 0px 0px #edeceb, 0px 2px 0px 0px rgba(255, 255, 255, 0.75), inset 0px -1px 0px 0px rgba(255, 255, 255, 0.75);
@@ -459,13 +459,13 @@
   padding-bottom: 35px;
   margin-bottom: 18px;
 }
-.panel .content-panel-inner .content-panel-item:last-child {
+.content-panel-item:last-child {
   border: none;
   box-shadow: none;
   margin: 0;
   padding: 0;
 }
-.panel .content-panel-inner .content-panel-item:before {
+.content-panel-item:before {
   content: "";
   display: block;
   float: left;
@@ -477,27 +477,27 @@
   box-shadow: inset 1px 0 3px 0 rgba(199, 199, 199, 0.75), inset 1px 1px 0px 0px rgba(199, 199, 199, 0.75), 1px 1px 0px 0px #ffffff;
   background: url(../images/icons_sprite2.png) no-repeat;
 }
-.panel .content-panel-inner .content-panel-item .experience-text {
+.experience-text {
   margin-left: 90px;
   font-family: OpenSans-Semibold;
 }
-.panel .content-panel-inner .content-panel-item .experience-text .work-place,
-.panel .content-panel-inner .content-panel-item .experience-text .time-period {
+.experience-text .work-place,
+.experience-text .time-period {
   margin: 0;
 }
-.panel .content-panel-inner .content-panel-item .experience-text .time-period {
+.experience-text .time-period {
   font-family: OpenSans-Regular;
 }
-.panel .content-panel-inner .icon-bag:before {
+.icon-bag:before {
   background-position: 17px 17px;
 }
-.panel .content-panel-inner .icon-school:before {
+.icon-school:before {
   background-position: -42px 17px;
 }
-.panel .content-panel-inner .icon-graduate:before {
+.icon-graduate:before {
   background-position: -106px 17px;
 }
-.panel .content-panel-inner .icon-file:before {
+.icon-file:before {
   background-position: -166px 17px;
 }
 .container {
@@ -643,6 +643,10 @@ body {
   font-family: OpenSans-Semibold;
   font-size: 14px;
   margin-bottom: 5px;
+  border-top: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .portfolio-basic-text {
   font-family: OpenSans-Regular;
@@ -667,46 +671,48 @@ body {
 .skils-item {
   font-size: 9px;
   text-transform: uppercase;
-  margin-left: 5px;
+  margin: 0 0 10px 16px;
   display: inline-block;
   color: #1e7465;
   font-family: OpenSans-Semibold;
-  height: 25px;
-  line-height: 21px;
+  height: 16px;
+  line-height: 16px;
   text-align: center;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
+  position: relative;
+  padding: 0 5px;
+  border-top: 1px solid #c5c5c5;
+  border-bottom: 1px solid #c5c5c5;
+  border-left: none;
+  box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #fbf9f9 6%, #e9e6e4 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%, #fbf9f9 6%, #e9e6e4 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #fbf9f9 6%, #e9e6e4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e9e6e4', GradientType=0);
 }
-.skils-item:before,
+.skils-item:before {
+  content: "";
+  display: block;
+  background: url(../images/icons_sprite2.png) no-repeat;
+  width: 12px;
+  height: 18px;
+  background-position: -268px 0px;
+  position: absolute;
+  top: -1px;
+  left: -11px;
+}
 .skils-item:after {
   content: "";
   display: block;
   background: url(../images/icons_sprite2.png) no-repeat;
-  float: left;
-  width: 10px;
-  height: 21px;
-}
-.skils-item:before {
-  position: relative;
-  top: 0px;
-  left: 0;
-  background-position: -277px 0px;
-}
-.skils-item:after {
-  float: right;
   width: 4px;
-  height: 21px;
-  background-position: -416px 0px;
-  position: relative;
-  top: 0px;
-  left: 0px;
-}
-.skils-item .skils-text {
-  display: inline-block;
-  background: url(../images/label_line.png) repeat-x;
-  padding: 0px 5px 0px 5px;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.45);
+  height: 18px;
+  background-position: -298px 0px;
+  position: absolute;
+  top: -1px;
+  right: -2px;
 }
 .site-footer-section {
   height: 63px;
