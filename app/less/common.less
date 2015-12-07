@@ -29,7 +29,6 @@ html, body{
     position: relative;
     min-height: 100%;
     margin: 0 auto -63px;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/background.jpg", sizingMethod='scale'); //for ie8
     &:after {
         content: "";
         display: block;
@@ -51,10 +50,13 @@ html, body{
     .header-logo{
         float: left;
         padding-left: 8px;
-        .logo-link{
-           display: block;
-        }
     }
+}
+.logo-link{
+   display: block;
+    width: 95px;
+    height: 75px;
+    overflow: hidden;
 }
 
 
@@ -66,14 +68,16 @@ html, body{
 .top-menu{
     .ul-clear;
     overflow: hidden;
-    .icons-wrapper{
-        float: left;
-        margin-right: 9px;
-        &:last-child{
-            margin-right: 0;
-        }
+}
+.icons-wrapper{
+    float: left;
+    margin-right: 9px;
+    &:last-child{
+        margin-right: 0;
     }
 }
+
+
 .icons-social{
     display: block;
     width: 42px;
@@ -113,16 +117,18 @@ html, body{
     overflow: hidden;
     padding-top: 34px;  
     border-top: 1px solid #ddcf9a;
-    .content{
-        width: 80%;
-        margin: 0 auto;
-        overflow: hidden;
-        .sidebar{
-            float: left;
-            width: 250px;
-        }
+}
+
+.content{
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    .sidebar{
+        float: left;
+        width: 250px;
     }
 }
+
 .page-content{
     margin-left: 310px;
 }
@@ -144,12 +150,14 @@ html, body{
 
 .porfolio-basic{
     .ul-clear;
-    margin-left: 188px;
+    float: right;
+    width: 385px;
+    color: #727070;
     .porfolio-basic-item{
         margin: 0;
         font-family: OpenSans-Semibold;
         font-size: 14px;
-        margin-bottom: 6px;
+        margin-bottom: 5px;
     }
 }
 .portfolio-basic-text{
@@ -234,36 +242,38 @@ html, body{
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    .footer-icon{
+}
+.footer-icon{
+    display: block;
+    float: left;
+    position: relative;
+    margin-left: 29px;
+    text-transform: uppercase;
+    font-family: OpenSans-Bold;
+    font-size: 14px;
+    color: #9c9c9c;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    text-decoration: none;
+    &:before{
+        content:"";
         display: block;
-        float: left;
-        position: relative;
-        margin-left: 29px;
-        text-transform: uppercase;
-        font-family: OpenSans-Bold;
-        font-size: 14px;
-        color: #9c9c9c;
-        text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.85);
-        cursor: pointer;
-        text-decoration: none;
-        &:before{
-            content:"";
-            display: block;
-            width: 24px;
-            height: 22px;
-            background: url(../images/icons_sprite1.png);
-            background-position: 224px 23px;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            margin-top: -13px;
-            margin-left: -29px;
-        }
-    }
-    .footer-icon:hover:before{
-        background-position: 202px 23px;
+        width: 24px;
+        height: 22px;
+        background: url(../images/icons_sprite1.png);
+        background-position: 224px 23px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -13px;
+        margin-left: -29px;
     }
 }
+
+.footer-icon:hover:before{
+    background-position: 202px 23px;
+}
+
 .footer-item{
     display: block;
     margin-left: 125px;

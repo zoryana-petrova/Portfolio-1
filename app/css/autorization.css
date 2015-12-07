@@ -351,7 +351,7 @@
 }
 .contacts-panel-link {
   display: block;
-  padding: 8px 60px;
+  padding: 8px 97px;
   color: #727070;
   font-size: 14px;
   text-align: left;
@@ -447,6 +447,7 @@
   border-right-color: #b8b8b8;
   border-bottom-color: #c5c5c5;
   border-left-color: #b8b8b8;
+  overflow: hidden;
 }
 .panel .content-panel-inner .content-panel-item {
   -webkit-box-shadow: 0px 1px 0px 0px #edeceb, 0px 2px 0px 0px rgba(255, 255, 255, 0.75), inset 0px -1px 0px 0px rgba(255, 255, 255, 0.75);
@@ -524,7 +525,6 @@ body {
   position: relative;
   min-height: 100%;
   margin: 0 auto -63px;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/background.jpg", sizingMethod='scale');
 }
 .wrapper:after {
   content: "";
@@ -545,8 +545,11 @@ body {
   float: left;
   padding-left: 8px;
 }
-.top-menu-content .header-logo .logo-link {
+.logo-link {
   display: block;
+  width: 95px;
+  height: 75px;
+  overflow: hidden;
 }
 .top-menu-wrapper {
   float: right;
@@ -559,11 +562,11 @@ body {
   list-style-type: none;
   overflow: hidden;
 }
-.top-menu .icons-wrapper {
+.icons-wrapper {
   float: left;
   margin-right: 9px;
 }
-.top-menu .icons-wrapper:last-child {
+.icons-wrapper:last-child {
   margin-right: 0;
 }
 .icons-social {
@@ -601,12 +604,12 @@ body {
   padding-top: 34px;
   border-top: 1px solid #ddcf9a;
 }
-.page-content-wrapper .content {
+.content {
   width: 80%;
   margin: 0 auto;
   overflow: hidden;
 }
-.page-content-wrapper .content .sidebar {
+.content .sidebar {
   float: left;
   width: 250px;
 }
@@ -631,13 +634,15 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-left: 188px;
+  float: right;
+  width: 385px;
+  color: #727070;
 }
 .porfolio-basic .porfolio-basic-item {
   margin: 0;
   font-family: OpenSans-Semibold;
   font-size: 14px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 .portfolio-basic-text {
   font-family: OpenSans-Regular;
@@ -720,7 +725,7 @@ body {
   top: 50%;
   transform: translate(0, -50%);
 }
-.footer-inner .footer-icon {
+.footer-icon {
   display: block;
   float: left;
   position: relative;
@@ -733,7 +738,7 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
-.footer-inner .footer-icon:before {
+.footer-icon:before {
   content: "";
   display: block;
   width: 24px;
@@ -746,7 +751,7 @@ body {
   margin-top: -13px;
   margin-left: -29px;
 }
-.footer-inner .footer-icon:hover:before {
+.footer-icon:hover:before {
   background-position: 202px 23px;
 }
 .footer-item {
@@ -775,7 +780,7 @@ body {
   -moz-box-shadow: 0px 11px 27px 0px rgba(159, 159, 159, 0.75);
   box-shadow: 0px 11px 27px 0px rgba(159, 159, 159, 0.75);
 }
-.autorization-wrapper .autorization-header {
+.autorization-header {
   position: absolute;
   top: -23px;
   left: 21px;
@@ -783,7 +788,7 @@ body {
   font-size: 12px;
   color: #727070;
 }
-.autorization-wrapper .autorization-header .autorization-text {
+.autorization-header .autorization-text {
   margin: 0px;
 }
 .autorization-form .autorization-input {
@@ -813,7 +818,7 @@ body {
 .autorization-form .autorization-checkbox {
   display: none;
 }
-.autorization-form .label-checkbox {
+.label-checkbox {
   display: block;
   position: relative;
   padding-left: 25px;
@@ -825,7 +830,7 @@ body {
   font-family: OpenSans-Regular;
   color: #727070;
 }
-.autorization-form .label-checkbox:before {
+.label-checkbox:before {
   content: "";
   display: block;
   width: 14px;
@@ -842,7 +847,7 @@ body {
   margin-right: 10px;
   cursor: pointer;
 }
-.autorization-form .autorization-checkbox:checked + .label-checkbox:before {
+.autorization-checkbox:checked + .label-checkbox:before {
   content: url(../images/check.png);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   font-size: 15px;
@@ -850,11 +855,11 @@ body {
   text-align: center;
   line-height: 15px;
 }
-.autorization-form .autorization-submit-wrapper {
+.autorization-submit-wrapper {
   width: 150px;
   margin: 0 auto;
 }
-.autorization-form .autorization-submit-wrapper .autorization-submit {
+.autorization-submit-wrapper .autorization-submit {
   display: inline-block;
   font-size: 14px;
   font-family: 'OpenSans-Semibold', sans-serif;
@@ -879,7 +884,7 @@ body {
   background: linear-gradient(to bottom, #80e8cb 0%, #43b796 100%);
   padding: 10px 3.8em;
 }
-.autorization-form .autorization-submit-wrapper .autorization-submit:hover {
+.autorization-submit-wrapper .autorization-submit:hover {
   background: #4fc4a7;
   background: -o-linear-gradient(top, #5fdcbd 0%, #3aa087 100%);
   background: -webkit-linear-gradient(top, #5fdcbd 0%, #3aa087 100%);
@@ -888,7 +893,7 @@ body {
   -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
 }
-.autorization-form .autorization-submit-wrapper .autorization-submit:active {
+.autorization-submit-wrapper .autorization-submit:active {
   color: #eeedec;
   text-shadow: 0px 1px 0px #666565;
   border: 1px solid #2d997e;
