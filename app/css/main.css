@@ -690,26 +690,15 @@ body {
   background: -moz-linear-gradient(top, #ffffff 0%, #fbf9f9 6%, #e9e6e4 100%);
   background: -webkit-linear-gradient(top, #ffffff 0%, #fbf9f9 6%, #e9e6e4 100%);
   background: linear-gradient(to bottom, #ffffff 0%, #fbf9f9 6%, #e9e6e4 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e9e6e4', GradientType=0);
 }
 .skils-item:before {
-  content: "";
-  display: block;
-  background: url(../images/icons_sprite2.png) no-repeat;
-  width: 12px;
-  height: 18px;
-  background-position: -268px 0px;
+  content: url(../images/for_skils1.png);
   position: absolute;
   top: -1px;
   left: -11px;
 }
 .skils-item:after {
-  content: "";
-  display: block;
-  background: url(../images/icons_sprite2.png) no-repeat;
-  width: 4px;
-  height: 18px;
-  background-position: -298px 0px;
+  content: url(../images/for_skils2.png);
   position: absolute;
   top: -1px;
   right: -2px;
