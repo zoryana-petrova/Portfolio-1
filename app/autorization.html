@@ -5,8 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Petrova Zoryana</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/autorization.css">
+	<script src="bower/modernizr/modernizr.js"></script>
 	<!-- HTML5 shim and Respond.js IE8 of HTML5 elements and media queries-->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -23,9 +25,9 @@
 				<h3 class="autorization-text">Авторизируйтесь</h3>
 			</header>
 			<div class="autorization-form-wrapper">
-				<form action="#" class="autorization-form">
-					<input type="email" placeholder="Введите email" id="email-input" class="autorization-input input-mail">
-					<input type="password" placeholder="Введите пароль" id="input-password" class="autorization-input input-key">
+				<form action="#" id = "autorization-form" class="form">
+					<input type="email" placeholder="Введите email" id="email-input" class="autorization-input form-input" qtip-content="введите email" qtip-position="right">
+					<input type="password" placeholder="Введите пароль" id="input-password" class="autorization-input input-key form-input" qtip-content="введите пароль" qtip-position="right">
 					<input id="autorization-checkbox" class="autorization-checkbox" type="checkbox">
 					<label class="label-checkbox" for="autorization-checkbox">Запомнить меня?</label>
 					<div class="autorization-submit-wrapper">
@@ -49,8 +51,11 @@
 	</footer>
 	
 	<script src="bower/jquery/jquery.js"></script>
-	<script type="text/javascript" src="bower/jquery-placeholder/jquery.placeholder.js"></script>
+	<script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
+	<script src ="bower/qtip2/jquery.qtip.js"></script>
 	<script src="js/main.js"></script>	
+	<script src="js/autorization.js"></script>
+	<script src="js/validation.js"></script>
 </body>
 </html>
 

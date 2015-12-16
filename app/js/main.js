@@ -1,4 +1,6 @@
 $(document).ready(function() {
-	console.log('Файл main.js успешно загружен');
+	if(!Modernizr.input.placeholder){
+		$('input, textarea').placeholder();
+	}
 });
-$('input[placeholder], textarea[placeholder]').placeholder();
+

@@ -5,9 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Petrova Zoryana</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
+	<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 	<link rel="stylesheet" href="css/feedback.css">
+	<script src="bower/modernizr/modernizr.js"></script>
 	<!-- HTML5 shim and Respond.js IE8 of HTML5 elements and media queries-->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -88,22 +89,22 @@
 	                            	<div class="user-data-wrapper">
 	                            		<div class="input-wrapper">
 		                            		<label class="form-label"for="name">Имя</label>
-											<input class="input-user-data" type="text" id="name" placeholder="Как к Вам обращаться">
+											<input class="input-user-data form-input" type="text" id="name" qtip-content="введите имя" placeholder="Как к Вам обращаться">
 	                       	        	</div>
 		                            	<div class="input-wrapper">
 		                            		<label class="form-label"for="user_email">Email</label>
-		                            		<input class="input-user-data" type="email" name="user_email" placeholder="Куда мне писать">
+		                            		<input class="input-user-data form-input" type="email" name="user_email" qtip-content="введите email" qtip-position="right" placeholder="Куда мне писать">
 		                            	</div>
 	                            	</div>
 	                            	
 	                            	<div class="textarea-wrapper">
 	                            		<label class="form-label textarea-label "for="message">Сooбщение</label>
-	                            		<textarea name="message" id="message" class="message" cols="20" rows="6" placeholder="Кратко в чем суть"></textarea>
+	                            		<textarea name="message" id="message" class="message form-textarea" cols="20" rows="6" qtip-content="ваш вопрос" placeholder="Кратко в чем суть"></textarea>
 	                            	</div>
 	                            	<div class="capcha-img-wrapper clearfix">
 	                            		<label class="form-label"for="code-enter">Введите код указаный на картинке</label>
 	                            		<img class="capcha" src="images/captcha.png" alt="Enter code">
-										<input class="input-user-data input-capcha" type="text" name="code-enter" id="code-enter" placeholder="Введите код">
+										<input class="input-user-data input-capcha form-input" type="text" name="code-enter" qtip-content="код капчи" qtip-position="right" id="code-enter" placeholder="Введите код">
 	                            	</div>
 	                            	<div class="buttons-feedback">
 	                            		<input type="submit" value="Отправить" class="feedback-submit">
@@ -132,6 +133,9 @@
 	
 	<script src="bower/jquery/jquery.js"></script>
 	<script type="text/javascript" src="bower/jquery-placeholder/jquery.placeholder.js"></script>
+	<script src ="bower/qtip2/jquery.qtip.js"></script>
+    <script src="js/feedback.js"></script>
+    <script src="js/validation.js"></script>
 	<script src="js/main.js"></script>	
 </body>
 </html>

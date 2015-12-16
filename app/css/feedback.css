@@ -739,7 +739,7 @@ body {
   width: 24px;
   height: 22px;
   background: url(../images/icons_sprite1.png);
-  background-position: 224px 23px;
+  background-position: 223px 23px;
   position: absolute;
   top: 50%;
   left: 0;
@@ -756,6 +756,24 @@ body {
   font-size: 12px;
   color: #727070;
   text-align: left;
+}
+.qtip-myclass {
+  position: absolute;
+  font-family: OpenSans-Semibold;
+  font-size: 12px;
+  color: #9a4e32;
+  border: 1px solid #cb6844;
+  background: #f3a58b;
+  background: -moz-linear-gradient(top, #f3a287 10%, #d37654 100%);
+  background: -webkit-linear-gradient(top, #f3a287 10%, #d37654 100%);
+  background: linear-gradient(to bottom, #f3a287 10%, #d37654 100%);
+  -webkit-box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 3px 0px rgba(246, 247, 247, 0.15);
+  -moz-box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 3px 0px rgba(246, 247, 247, 0.15);
+  box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 3px 0px rgba(246, 247, 247, 0.15);
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.45), 0px -1px 0px rgba(10, 10, 10, 0.25);
+}
+.error {
+  border: 1px solid #e0ad99 !important;
 }
 .panel .content-panel-header .panel-header {
   font-family: OpenSans-Light;
@@ -809,7 +827,7 @@ body {
 .textarea-wrapper {
   margin-bottom: 8px;
 }
-.textarea-wrapper .message {
+.message {
   width: 100%;
   resize: none;
   font-family: 'Open Sans', sans-serif;

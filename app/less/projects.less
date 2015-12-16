@@ -135,19 +135,33 @@
 	border-bottom: 1px solid #b6b6b6;
 	position: relative;
 	cursor: pointer;
+	width: 167px;
+	height: 120px;
+	display: block;
+	overflow: hidden;
 	.projects-image{
 		display: block;
-		width: 100%;
 	}
 }
-.see-more{
-	position: absolute;
-	z-index: -3;
-}
+
 .projcts-image-wrapper:hover{
-	.see-more{
+	&:before{
+		.animated;
+		.slideInUp;
+		content:" ";
+		display: block;
+		width: 167px;
+		height: 120px;
+		position: absolute;
+		background: #6F6D6D;
+		background: rgba(111, 109, 109, 0.5);
+		border-radius: 5px 5px 0 0;
+		top: 0;
+	}
+	&:after{
 		.animated;
 		.zoomIn;
+		content: "Посмотреть";
 		position: absolute;
 		display: block;
 		padding: 5px;
@@ -160,23 +174,10 @@
 		left: 50%;
 		margin-left: -62px;
 		margin-top: -8px;
-		z-index: 5;
-	}
-	&:before{
-		.animated;
-		.slideInUp;
-		content:" ";
-		display: block;
-		width: 167px;
-		height: 120px;
-		position: absolute;
-		background: rgb(111, 109, 109);
-		background: rgba(111, 109, 109, 0.5);
-		border-radius: 5px 5px 0 0;
-		top: 0;
+		z-index: 3;
+		cursor: pointer;
 	}
 }
-
 
 .item-content-wrapper{
 	.project-link{
@@ -194,3 +195,174 @@
 		padding: 6px 5px;
 	}
 }
+//START SECTION POPUP
+#popup-page{
+	display: none;
+}
+.popup-page{
+	width: 365px;
+	margin: 0 auto;
+	.form-popup-wpapper{
+		padding: 22px 21px;
+		background: #f5f4f3;
+		background: linear-gradient(#fbfbfa,#f0eeed);
+		-webkit-box-shadow: 0px 11px 27px 0px rgba(159, 159, 159, 0.75), inset 0px 6px 6px 0px rgba(255, 255, 255, 1);
+		-moz-box-shadow:    0px 11px 27px 0px rgba(159, 159, 159, 0.75), inset 0px 6px 6px 0px rgba(255, 255, 255, 1);
+		box-shadow:         0px 11px 27px 0px rgba(159, 159, 159, 0.75), inset 0px 6px 6px 0px rgba(255, 255, 255, 1);
+		border: 1px solid #d2d2d2;
+		box-sizing: border-box;
+		border-radius: 6px;
+		position: relative;
+	}
+}
+.popup-header-text{
+	margin: 0;
+	font-size: 12px;
+	font-family: OpenSans-Light; 
+	color: #f8f7f6;
+	padding: 0 0 5px 20px;
+}
+.popup-window-close{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	cursor: pointer;
+	font-family: OpenSans-ExtraBold;
+	background: transparent;
+    border: none;
+    outline: none;
+    padding: 7px;
+    background: url(../images/icons_sprite1.png) no-repeat;
+    background-position: -198px -89px;
+}
+.message{
+	.message-header, .message-text{
+		margin: 0
+	}
+	.message-header{
+		font-size: 16px;
+		font-family:'OpenSans-Semibold';
+	}
+	display: none; 
+    padding: 4px 8px;
+    border-radius: 5px;
+	font-size: 14px;
+	font-family: 'OpenSans-Regular';
+}
+.ms-error{
+	background: #e9c8bc;
+	border: 1px solid #cb6945;
+	color: #cb6945;
+}
+.ms-succes{
+	background: #bce1cb;
+    border: 1px solid #49bb7b;
+    color: #49bb7b;
+}
+.input-wrapper{
+	margin-bottom: 8px;
+}
+.form-label{
+	display: block;
+	margin-bottom: 7px;
+	font-family:  OpenSans-Regular; 
+	font-size: 14px;
+	color: #727070;
+}
+.form-input, .add-project-textarea, .add-image{
+	width: 100%;
+	font-family: OpenSans-Light;
+	font-size: 12px;
+	font-weight: 300;
+	box-sizing: border-box;
+	outline: none;
+	border: 1px solid #d6d4d3;
+	border-radius: 4px;
+	color: #c7c6c6;
+	padding: 10px 5px;
+}
+.form-input, .add-image{
+	background: #fbfcfd;
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 0px 1px 3px rgba(255, 255, 255, 0.15), 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 0px 1px 3px rgba(255, 255, 255, 0.15), 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
+	box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 0px 1px 3px rgba(255, 255, 255, 0.15), 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
+	background: -o-linear-gradient(top, rgba(251, 249, 249, 0) 0%, #e9e7e7 100%);
+	background: -webkit-linear-gradient(top, rgba(251, 249, 249, 0) 0%, #e9e7e7 100%);
+	background: linear-gradient(to bottom, rgba(251, 249, 249, 0) 0%, #e9e7e7 100%);
+	height: 43px;
+}
+
+.textarea-wrapper{
+    margin-bottom: 12px;
+}
+
+.add-project-textarea{
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 0px 1px 3px rgba(255, 255, 255, 0.15), 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 0px 1px 3px rgba(255, 255, 255, 0.15), 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
+	box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 0px 1px 3px rgba(255, 255, 255, 0.15), 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
+	background: -o-linear-gradient(top, rgba(251, 249, 249, 0) 0%, #e9e7e7 100%);
+	background: -webkit-linear-gradient(top, rgba(251, 249, 249, 0) 0%, #e9e7e7 100%);
+	background: linear-gradient(to bottom, rgba(251, 249, 249, 0) 0%, #e9e7e7 100%);
+	resize: none;
+}
+
+
+.form-button-wrapper{
+    width: 125px;
+    margin: 0 auto;
+    .add-project-submit{
+    	#uikit > .button-primary;
+		padding: 9px 1.8em;
+		position: relative;
+		left: 50%;
+		margin-left: -70px;
+    }
+}
+.add-image-wrapper{
+	.add-project-input{
+		display: none;
+	}
+	&:before{
+		content:"";
+		display: block;
+		height: 18px;
+		margin-bottom: 7px;
+		
+	}
+}
+.add-image{
+	position: relative;
+	cursor: pointer;
+	&:before{
+		content: "Картинка пректа";
+		display: block;
+		font-family: OpenSans-Regular;
+		font-size: 14px;
+		color: #727070;
+		font-family: OpenSans-Regular;
+		font-size: 14px;
+		color: #727070;
+		position: absolute;
+		top: -25px;
+		left: 0;
+	}
+	&:after{
+		content: "";
+		display: block;
+		width: 54px;
+		height: 40px;
+		background-color: #eee;
+		border-left: 1px solid #ccc;
+    	position: absolute;
+    	top: 0;
+    	right: 0;
+    	background: url(../images/icons_sprite1.png) no-repeat;
+    	background-position: -182px -119px;
+    }
+
+}
+
+
+//END SECTION POPUP
