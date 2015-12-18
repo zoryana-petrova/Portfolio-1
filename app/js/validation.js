@@ -66,8 +66,7 @@ window.validationModule = (function () {
     elems.each(function(i, elem){
       var $elem = $(elem);
       if($elem.val() === ''){
-           console.log($elem.attr('type') + ':' + $elem.css('display') + ' :val:' + $elem.val());
-           console.log(" ");
+        console.log($elem.attr('type') + ':' + $elem.css('display') + ' :val:' + $elem.val());
         _createQtip($elem, $elem.attr("qtip-position"));
         $(this).addClass("error");
         isValid = false;

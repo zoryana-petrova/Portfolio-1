@@ -65,7 +65,7 @@ var addProjectModule = (function () {
 
     // Работа с модальным окном
 	var _showModal = function(e){
-		// e = e || window.e;
+		e = e || window.e;
 		e.preventDefault ? e.preventDefault() : (e.returnValue=false);
 
 		var blockPopup = $("#popup-page"),
@@ -86,7 +86,7 @@ var addProjectModule = (function () {
     // Добавление проекта
 	var _addProject = function(e){
 		console.log("Добавление проекта");
-		// e = e || window.e;
+		e = e || window.e;
 		e.preventDefault ? e.preventDefault() : (e.returnValue=false);
 
 		//объявляем переменные
