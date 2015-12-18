@@ -65,13 +65,15 @@ window.validationModule = (function () {
 
     elems.each(function(i, elem){
       var $elem = $(elem);
-
       if($elem.val() === ''){
+           console.log($elem.attr('type') + ':' + $elem.css('display') + ' :val:' + $elem.val());
+           console.log(" ");
         _createQtip($elem, $elem.attr("qtip-position"));
         $(this).addClass("error");
         isValid = false;
       }
     });
+
     return isValid;
    
 	};
@@ -86,11 +88,12 @@ window.validationModule = (function () {
 
         if ($inputFile.val() === "") {
             $labelFile.addClass("error").trigger("show");
+             console.log($inputFile);
             isValid = false;
         } else {
             $labelFile.removeClass("error").trigger("hideTooltip");
         }
-    
+
     return isValid;
    
   };

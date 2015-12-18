@@ -4,8 +4,4 @@ ErrorDocument 401 /error401.html
 ErrorDocument 403 /error403.html
 ErrorDocument 404 /error404.html
 
-# Настройка сессии
-php_value session.use_cookies 1
-php_value session.use_only_cookies 1
-php_value session.save_path "sessions/"
-php_value session.trans_sid 0
+
