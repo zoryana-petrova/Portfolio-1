@@ -915,3 +915,16 @@ body {
   background: -webkit-linear-gradient(top, #4bbca1 0%, #257662 100%);
   background: linear-gradient(to bottom, #4bbca1 0%, #257662 100%);
 }
+.message {
+  display: none;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'OpenSans-Regular';
+  margin-bottom: 20px;
+}
+.ms-error {
+  background: #e9c8bc;
+  border: 1px solid #cb6945;
+  color: #cb6945;
+}

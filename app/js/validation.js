@@ -1,4 +1,4 @@
-var validationModule = (function () {
+window.validationModule = (function () {
 
 	// Инициализация модуля
 	var initInside = function () {
@@ -60,22 +60,18 @@ var validationModule = (function () {
 
   //Универсальная функция.  Валидация формы
 	var _checkInputs = function ($form) {
-    var elems = $form.find("input, textarea").filter(":visible"),
+    var elems = $form.find("input, textarea"),
         isValid = true;
 
     elems.each(function(i, elem){
       var $elem = $(elem);
 
       if($elem.val() === ''){
-        if(elem[type:password])
         _createQtip($elem, $elem.attr("qtip-position"));
         $(this).addClass("error");
-        console.log(elem);
         isValid = false;
       }
     });
-
-    console.log(isValid);
     return isValid;
    
 	};
@@ -90,13 +86,11 @@ var validationModule = (function () {
 
         if ($inputFile.val() === "") {
             $labelFile.addClass("error").trigger("show");
-             console.log($inputFile);
             isValid = false;
         } else {
             $labelFile.removeClass("error").trigger("hideTooltip");
         }
-
-    // console.log(isValid);
+    
     return isValid;
    
   };

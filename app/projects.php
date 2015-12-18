@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+$message = null;
+if(isset($_SESSION['message'])){
+    $message = $_SESSION['message'];
+}
+
+unset($_SESSION['message']);
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -5,22 +15,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petrova Zoryana</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-    <!-- build:css css/vendor.min.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower/normalize-css/normalize.css" />
-    <link rel="stylesheet" href="bower/qtip2/jquery.qtip.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:css css/projects.min.css -->
+    <link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
+    <link rel="stylesheet" href="bower/normalize-css/normalize.css">
     <link rel="stylesheet" href="css/projects.css">
-    <!-- endbuild -->
-
-    <!-- build:js js/modernizr.min.js -->
     <script src="bower/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
-
     <!-- HTML5 shim and Respond.js IE8 of HTML5 elements and media queries-->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -226,22 +224,14 @@
         </div>
     </footer>
 
-    <!-- build:js js/vendor.min.js -->
-    <!-- bower:js -->
-    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/jquery/jquery.js"></script>
     <script src="bower/bPopup/jquery.bpopup.js"></script>
-    <script src="bower/modernizr/modernizr.js"></script>
-    <script src="bower/qtip2/jquery.qtip.js"></script>
     <script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
-    <script src="bower/jquery-easing-original/jquery.easing.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-    
-    <!-- build:js js/main.min.js -->
     <script src="js/main.js"></script>  
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src ="bower/qtip2/jquery.qtip.js"></script>
     <script src="js/add_project.js"></script>
     <script src="js/validation.js"></script>
-    <!-- endbuild -->
 </body>
 </html>
 
