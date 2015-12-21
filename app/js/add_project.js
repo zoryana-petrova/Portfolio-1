@@ -15,14 +15,13 @@ var addProjectModule = (function () {
     
     var _loadFile = function(){
         var $inputFile = $(this),
-            $labelFile = $("#add-project").find(".add-image");
+            $labelFile = $inputFile.closest('form').find(".add-image");
 
         $labelFile.html(this.value);
 
-        if ($inputFile.val() !== '') {
+        if (this.value !== '') {
             $labelFile.removeClass("error").trigger("hideTooltip");
         } else {
-            
             $labelFile.trigger("hideTooltip");
         }
     }
@@ -42,21 +41,15 @@ var addProjectModule = (function () {
         // Скрываем сообщение об ошибке
         $form.find('.message').hide();
 
-        // Очистить инпуты
-        $form.find('.form-input')
-            .val('')
+        // Делаем нативный ресет формы чтобы очистить file input
+        $form.trigger('reset');
+
+        // Очистить тултипы
+        $form.find('.form-input, .add-project-textarea, .add-image')
             .trigger("hideTooltip");
 
-        // Очистить textarea
-        $form.find('.add-project-textarea')
-            .val('')
-            .trigger("hideTooltip");
-
-        // Очистить file input
         $form.find(".add-image")
-            .html("Загрузите и изображение")
-            .trigger("hideTooltip");
-
+            .html("Загрузите и изображение");
 
         // Очищаем классы ошибок
         $form.find(".error")
@@ -85,7 +78,6 @@ var addProjectModule = (function () {
     
     // Добавление проекта
 	var _addProject = function(e){
-		console.log("Добавление проекта");
 		e = e || window.e;
 		e.preventDefault ? e.preventDefault() : (e.returnValue=false);
 
@@ -95,16 +87,13 @@ var addProjectModule = (function () {
 
 
         if(!validationModule.isFormValid(form)){
-            console.log("Запрос на сервер не отправляем");
             return false;   
         }           
    
         var serverAnswer = _ajaxForm(form, url);
 		//запрос на сервер
         serverAnswer.done(function (ans) {
-            console.log("ajax запрос выполнен!");
-            console.log(ans);
-            
+                       
             var succesMessage = form.find(".ms-succes"),
                 errorMessage = form.find(".ms-error");
             
@@ -127,8 +116,7 @@ var addProjectModule = (function () {
     //3. вернуть ответ из севера 
    
     var _ajaxForm = function (form, url) {
-        console.log("ajax запрос, но с проверкой формы");
-       
+           
         data = form.serialize();
         var result = $.ajax({
 			url: url,
@@ -138,7 +126,6 @@ var addProjectModule = (function () {
 		});
         
         result.fail(function(ans) {
-			console.log("Проблемы в PHP");
             form.find('.ms-error').text("На сервере произошла ошибка").show();  //очистить текст
 		})
         

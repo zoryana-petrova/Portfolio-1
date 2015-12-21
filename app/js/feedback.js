@@ -10,8 +10,7 @@ var feedbackModule = (function () {
         $("#feedback-form").on("submit", _submitForm);
         $("form").on("keydown", ".error", _removeError);
         $("form").on("reset", _clearForm);
-        
-	};
+    };
 
     var _removeError = function (){
         $(this).removeClass("error");
@@ -22,7 +21,6 @@ var feedbackModule = (function () {
         form.find(".form-input, .form-textarea").trigger("hideTooltip");
         form.find(".error").removeClass("error");
     };
-    
     
     var _submitForm = function(e){
         e = e || window.e;
@@ -35,7 +33,6 @@ var feedbackModule = (function () {
     
     var _ajaxForm = function(form, url){
         if(!validationModule.isFormValid(form)){
-            console.log("Запрос на сервер не отправляем");
             return false;   
         }  
     };
@@ -43,6 +40,7 @@ var feedbackModule = (function () {
 	return {
 		init: initInside
 	};
+    
 })();
 
 feedbackModule.init(); 
