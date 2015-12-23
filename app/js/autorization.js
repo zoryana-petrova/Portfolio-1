@@ -39,8 +39,7 @@ var autorizationModule = (function () {
         
         var form = $(this),
             url = "/autorization.php";
-           
-
+          
         if(!window.validationModule.isFormValid(form)){
             console.log("Запрос на сервер не отправляем");
             _showError(form, "Заполните все поля формы!");
@@ -48,7 +47,7 @@ var autorizationModule = (function () {
         }  
 
         defObj = _ajaxForm(form, url);
-        defObj.success(function(response){
+        defObj.done(function(response){
             console.log('Ответ от сервера');
             console.log(response)
 
@@ -69,11 +68,7 @@ var autorizationModule = (function () {
     
     var _ajaxForm = function(form, url){
         _hideError(form)
-
-       
-
-        console.log("ajax запрос, но с проверкой формы");
-       
+   
         return $.post(url, form.serialize());
     };
 

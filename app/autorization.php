@@ -1,5 +1,5 @@
 <?php
-header('Content Type: application/json');
+header('Content-Type: application/json');
 
 $email = strtolower($_POST['email']);
 $password = strtolower($_POST['password']);

@@ -953,13 +953,14 @@ body {
   border-radius: 5px;
   font-size: 14px;
   font-family: 'OpenSans-Regular';
+  margin-bottom: 15px;
 }
 .ms-error {
   background: #e9c8bc;
   border: 1px solid #cb6945;
   color: #cb6945;
 }
-.ms-succes {
+.ms-success {
   background: #bce1cb;
   border: 1px solid #49bb7b;
   color: #49bb7b;
