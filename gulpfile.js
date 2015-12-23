@@ -1,5 +1,6 @@
 var gulp = require("gulp"),
 	wiredep = require('wiredep').stream,
+  connect = require('gulp-connect-php'),
 	browserSync = require('browser-sync');
 
 // сборка html css javascript + удаление папки dist
@@ -17,22 +18,32 @@ var filter = require('gulp-filter'),
 //ПАПКА APP
 // Загружаем сервер app
 gulp.task('server', function(){
-	browserSync({
-		port: 9000,
-		server: {
-			baseDir: 'app'
-		}
-	});
+  connect.server({base: 'app', port: 8001}, function (){
+    browserSync({
+      port: 9000,
+      proxy: '127.0.0.1:8001'
+    });
+  });
+ 
+  gulp.watch('**/*.php').on('change', function () {
+    browserSync.reload();
+  }); 
 });
+
 // Загружаем сервер dist
 gulp.task('server-dist', function () {  
-  browserSync({
-    port: 9000,
-    server: {
-      baseDir: 'dist'
-    }
+  connect.server({base: 'dist', port: 8001}, function (){
+    browserSync({
+      port: 9000,
+      proxy: '127.0.0.1:8001'
+    });
   });
+ 
+  gulp.watch('**/*.php').on('change', function () {
+    browserSync.reload();
+  }); 
 });
+
 
 //Слежка
 gulp.task('watch', function(){

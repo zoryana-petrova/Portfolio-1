@@ -78,6 +78,7 @@ var addProjectModule = (function () {
     
     // Добавление проекта
 	var _addProject = function(e){
+		console.log("Добавление проекта");
 		e = e || window.e;
 		e.preventDefault ? e.preventDefault() : (e.returnValue=false);
 
@@ -87,13 +88,16 @@ var addProjectModule = (function () {
 
 
         if(!validationModule.isFormValid(form)){
+            console.log("Запрос на сервер не отправляем");
             return false;   
         }           
    
         var serverAnswer = _ajaxForm(form, url);
 		//запрос на сервер
         serverAnswer.done(function (ans) {
-                       
+            console.log("ajax запрос выполнен!");
+            console.log(ans);
+            
             var succesMessage = form.find(".ms-succes"),
                 errorMessage = form.find(".ms-error");
             
@@ -116,7 +120,8 @@ var addProjectModule = (function () {
     //3. вернуть ответ из севера 
    
     var _ajaxForm = function (form, url) {
-           
+        console.log("ajax запрос, но с проверкой формы");
+       
         data = form.serialize();
         var result = $.ajax({
 			url: url,
@@ -126,6 +131,7 @@ var addProjectModule = (function () {
 		});
         
         result.fail(function(ans) {
+			console.log("Проблемы в PHP");
             form.find('.ms-error').text("На сервере произошла ошибка").show();  //очистить текст
 		})
         

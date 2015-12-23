@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
@@ -29,6 +29,8 @@
 	<!--[if IE 8]>
 		<link rel="stylesheet" type="text/css" href="css/ie-8.css" />
 	<![endif]-->
+
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -98,27 +100,28 @@
 	                        </header>
 	                        <div class="content-panel-inner">
 	                            <form action="#" class="feedback-form" id="feedback-form">
+						                    <div class="form-status-message"></div>
+
 	                            	<div class="user-data-wrapper">
 	                            		<div class="input-wrapper">
 		                            		<label class="form-label"for="name">Имя</label>
-											<input class="input-user-data form-input" type="text" id="name" qtip-content="введите имя" placeholder="Как к Вам обращаться">
+											<input class="input-user-data form-input" type="text" id="name" name="name" qtip-content="введите имя" placeholder="Как к Вам обращаться">
 	                       	        	</div>
 		                            	<div class="input-wrapper">
 		                            		<label class="form-label"for="user_email">Email</label>
-		                            		<input class="input-user-data form-input" type="email" name="user_email" qtip-content="введите email" qtip-position="right" placeholder="Куда мне писать">
+		                            		<input class="input-user-data form-input" type="email" name="email" qtip-content="введите email" qtip-position="right" placeholder="Куда мне писать">
 		                            	</div>
 	                            	</div>
 	                            	
 	                            	<div class="textarea-wrapper">
 	                            		<label class="form-label textarea-label "for="message">Сooбщение</label>
 	                            		<textarea name="message" id="message" class="message form-textarea" cols="20" rows="6" qtip-content="ваш вопрос" placeholder="Кратко в чем суть"></textarea>
+	                            		<label class="form-label" for="code-enter">Введите код указаный на картинке</label>
 	                            	</div>
-	                            	<div class="capcha-img-wrapper clearfix">
-	                            		<label class="form-label"for="code-enter">Введите код указаный на картинке</label>
-	                            		<img class="capcha" src="images/captcha.png" alt="Enter code">
-										<input class="input-user-data input-capcha form-input" type="text" name="code-enter" qtip-content="код капчи" qtip-position="right" id="code-enter" placeholder="Введите код">
+	                            	<div class="recaptcha-wrapper">
+	                            		<div class="g-recaptcha" data-sitekey="6LcodRMTAAAAAOYqhW5Qg03SI8lNgRa-UI8-_E8x"></div>
 	                            	</div>
-	                            	<div class="buttons-feedback">
+	                        	    <div class="buttons-feedback">
 	                            		<input type="submit" value="Отправить" class="feedback-submit">
 	                            		<input type="reset" value="Очистить" class="feedback-reset">
 	                            	</div>

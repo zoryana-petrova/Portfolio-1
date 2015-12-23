@@ -67,6 +67,7 @@
     border-radius: 4px;
     color: #c7c6c6;
     padding: 12px 5px;
+    margin-bottom: 7px;
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 0px 1px 3px rgba(255, 255, 255, 0.15), 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
     -moz-box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 0px 1px 3px rgba(255, 255, 255, 0.15), 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
     box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1), 0px 0px 1px 3px rgba(255, 255, 255, 0.15), 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
@@ -75,22 +76,6 @@
     background: linear-linear-gradient(#fbfcfd,#f4f3f4);
     height: 183px;
 }
-
-
-.capcha-img-wrapper{
-	margin-bottom: 28px;
-	.capcha{
-		display: block;
-		float: left;
-		margin-right: 16px;
-	}
-	.input-capcha{
-		width: 192px;
-		margin-top: 20px;
-		padding: 9px 5px;
-	}
-}
-
 .buttons-feedback{
 	padding: 0 28px;
 	.feedback-submit{
@@ -104,4 +89,26 @@
 	.feedback-reset{
 		padding: 10px 1.6em;
 	}
+}
+.form-status-message{
+	display: none; 
+    padding: 4px 8px;
+    border-radius: 5px;
+	font-size: 14px;
+	font-family: 'OpenSans-Regular';
+}
+.ms-error{
+	background: #e9c8bc;
+	border: 1px solid #cb6945;
+	color: #cb6945;
+}
+.ms-succes{
+	background: #bce1cb;
+    border: 1px solid #49bb7b;
+    color: #49bb7b;
+}
+.recaptcha-wrapper{
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
