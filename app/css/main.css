@@ -775,8 +775,3 @@ body {
 .error {
   border: 1px solid #e0ad99 !important;
 }
-.ms-error {
-  background: #e9c8bc;
-  border: 1px solid #cb6945;
-  color: #cb6945;
-}

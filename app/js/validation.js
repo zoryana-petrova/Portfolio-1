@@ -97,7 +97,6 @@ window.validationModule = (function () {
 
         if ($inputFile.val() === "") {
             $labelFile.addClass("error").trigger("show");
-             console.log($inputFile);
             isValid = false;
         } else {
             $labelFile.removeClass("error").trigger("hideTooltip");
@@ -110,8 +109,7 @@ window.validationModule = (function () {
   var isFormValid = function($form){
     var isInputFileValid = _checkInputFile($form);
     var isInputsValid = _checkInputs($form);
-
-
+    
     if(!isInputFileValid || !isInputsValid){
       $form.find('.ms-error').show();
       return false;

@@ -928,3 +928,8 @@ body {
   border: 1px solid #cb6945;
   color: #cb6945;
 }
+.ms-success {
+  background: #bce1cb;
+  border: 1px solid #49bb7b;
+  color: #49bb7b;
+}

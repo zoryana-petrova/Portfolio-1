@@ -40,7 +40,6 @@ var feedbackModule = (function () {
             url = "feedback.php";
 
         if(!validationModule.isFormValid(form)){
-            console.log("Запрос на сервер не отправляем");
             return false;   
         }  
 

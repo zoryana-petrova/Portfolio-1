@@ -13,11 +13,6 @@ var autorizationModule = (function () {
     var _removeError = function (){
         $(this).removeClass("error");
     };
-    // var _clearForm = function(form){
-    //     var form = $(this);
-    //     form.find(".form-input").trigger("hideTooltip");
-    //     form.find(".error").removeClass("error");
-    // };
        var _clearForm = function(){
         var $form = $("#autorization-form");
         
@@ -41,16 +36,12 @@ var autorizationModule = (function () {
             url = "/autorization.php";
           
         if(!window.validationModule.isFormValid(form)){
-            console.log("Запрос на сервер не отправляем");
             _showError(form, "Заполните все поля формы!");
             return false;   
         }  
 
         defObj = _ajaxForm(form, url);
         defObj.done(function(response){
-            console.log('Ответ от сервера');
-            console.log(response)
-
             if(response.error){
                 _showError(form, response.errorMessage);
                 return;
@@ -61,7 +52,6 @@ var autorizationModule = (function () {
         });
         
         defObj.fail(function(error) {
-            console.log("Проблемы в PHP");
             _showError(form, "На сервере произошла ошибка");
         });  
     };
